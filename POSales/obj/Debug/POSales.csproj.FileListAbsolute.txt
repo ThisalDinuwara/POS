@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\POSales\POSales\bin\Debug\POSales.exe.config
+C:\Users\User\source\repos\POSales\POSales\bin\Debug\POSales.exe
+C:\Users\User\source\repos\POSales\POSales\bin\Debug\POSales.pdb
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.MainForm.resources
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.Properties.Resources.resources
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.csproj.GenerateResource.cache
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.exe
+C:\Users\User\source\repos\POSales\POSales\obj\Debug\POSales.pdb
