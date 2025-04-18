@@ -66,6 +66,7 @@ namespace POSales
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //update brand name
             if (MessageBox.Show("Are you sure you want to update this record?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 cn.Open();
