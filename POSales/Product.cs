@@ -28,7 +28,7 @@ namespace POSales
         {
             int i = 0;
             dgvProduct.Rows.Clear();
-            cm = new SqlCommand("SELECT p.pcode, p.barcode, p.pdesc, b.brand, c.category, p.price, p.reorder FROM tblProduct AS p INNER JOIN tblBrand AS b ON b.id = p.bid INNER JOIN tblCategory AS c on c.id = p.cid", cn);
+            cm = new SqlCommand("SELECT p.pcode, p.barcode, p.pdesc, b.brand, c.category, p.price, p.reorder FROM tblProduct AS p INNER JOIN tblBrand AS b ON b.id = p.bid INNER JOIN tblCategory AS c on c.id = p.cid WHERE CONCAT(p.pdesc, b.brand, c.category) LIKE '%" + txtSearch.Text + "%'", cn);
             cn.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
@@ -76,6 +76,11 @@ namespace POSales
                     MessageBox.Show("Product has been successfully deleted.", "Point Of Sales", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            LoadProduct();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
             LoadProduct();
         }
     }

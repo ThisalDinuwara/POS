@@ -126,6 +126,7 @@ namespace POSales
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
+            openChildForm(new Supplier());
             hideSubmenu();
         }
 
@@ -162,6 +163,13 @@ namespace POSales
         private void btnLogout_Click(object sender, EventArgs e)
         {
             hideSubmenu();
+
+            if (MessageBox.Show("Logout Application?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
         }
     }
 }
