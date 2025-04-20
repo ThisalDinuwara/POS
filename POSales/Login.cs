@@ -29,6 +29,12 @@ namespace POSales
 
         }
 
+        public void Clear()
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+        }
+
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -43,6 +49,20 @@ namespace POSales
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+        private bool AuthenticateUser(string username, string password)
+        {
+            return username == ValidUsername && password == ValidPassword;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
@@ -70,9 +90,12 @@ namespace POSales
                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private bool AuthenticateUser(string username, string password)
+
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            return username == ValidUsername && password == ValidPassword;
+            MessageBox.Show("Are you sure", "Error",
+                               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Clear();
         }
     }
 }

@@ -73,7 +73,9 @@ namespace POSales
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            DashboardTest dashboardTest = new DashboardTest();
+            dashboardTest.Show();
+            this.Hide();
         }
 
         private void lblRole_Click(object sender, EventArgs e)
@@ -152,6 +154,7 @@ namespace POSales
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            openChildForm(new UserAccount());
             hideSubmenu();
         }
 
