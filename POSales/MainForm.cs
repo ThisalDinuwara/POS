@@ -174,5 +174,10 @@ namespace POSales
                 login.ShowDialog();
             }
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

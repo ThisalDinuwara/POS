@@ -124,5 +124,10 @@ namespace POSales
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ProductModule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
