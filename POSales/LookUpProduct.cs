@@ -19,6 +19,7 @@ namespace POSales
         SqlDataReader dr;
         string stitle = "Point of Sales";
         Cashier cashier;
+
         public LookUpProduct(Cashier cash)
         {
             InitializeComponent();
@@ -35,14 +36,14 @@ namespace POSales
         private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvProduct.Columns[e.ColumnIndex].Name;
-            if(colName == "Select")
+            if (colName == "Select")
             {
                 Qty qty = new Qty(cashier);
-                //qty.ProductDetails(dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString(), double.Parse(dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString()), cashier.lblTransaction.Text, int.Parse(dgvProduct.Rows[e.RowIndex].Cells[7].Value.ToString()));
+                // MODIFIED: Fixed column indices to match the actual columns in LoadProduct
                 qty.ProductDetails(dgvProduct.Rows[e.RowIndex].Cells[1].Value?.ToString() ?? "",
-   double.TryParse(dgvProduct.Rows[e.RowIndex].Cells[7].Value?.ToString(), out double price) ? price : 0.0,
-   cashier.lblTransno.Text,
-   int.TryParse(dgvProduct.Rows[e.RowIndex].Cells[8].Value?.ToString(), out int quantity) ? quantity : 0);
+                    double.TryParse(dgvProduct.Rows[e.RowIndex].Cells[6].Value?.ToString(), out double price) ? price : 0.0,
+                    cashier.lblTransno.Text,
+                    int.TryParse(dgvProduct.Rows[e.RowIndex].Cells[7].Value?.ToString(), out int quantity) ? quantity : 0);
                 qty.ShowDialog();
             }
         }

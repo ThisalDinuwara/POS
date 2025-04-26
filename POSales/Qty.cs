@@ -22,6 +22,7 @@ namespace POSales
         private String transno;
         private int qty;
         Cashier cashier;
+
         public Qty(Cashier cash)
         {
             InitializeComponent();
@@ -41,16 +42,24 @@ namespace POSales
         {
             if ((e.KeyChar == 13) && (txtQty.Text != string.Empty))
             {
+                // MODIFIED: Calculate total and include all required fields in INSERT
+                double total = price * int.Parse(txtQty.Text);
+
                 cn.Open();
-                cm = new SqlCommand("INSERT INTO tblCart(transno, pcode, price, qty, sdate, cashier)VALUES(@transno, @pcode, @price, @qty, @sdate, @cashier)", cn);
-                cm.Parameters.AddWithValue("@transno",transno);
+                // MODIFIED: Added disc, total, and status columns to the INSERT statement
+                cm = new SqlCommand("INSERT INTO tblCart(transno, pcode, price, qty, disc, total, sdate, cashier, status) VALUES (@transno, @pcode, @price, @qty, @disc, @total, @sdate, @cashier, @status)", cn);
+                cm.Parameters.AddWithValue("@transno", transno);
                 cm.Parameters.AddWithValue("@pcode", pcode);
                 cm.Parameters.AddWithValue("@price", price);
                 cm.Parameters.AddWithValue("@qty", int.Parse(txtQty.Text));
+                cm.Parameters.AddWithValue("@disc", 0); // Default discount to 0
+                cm.Parameters.AddWithValue("@total", total);
                 cm.Parameters.AddWithValue("@sdate", DateTime.Now);
                 cm.Parameters.AddWithValue("@cashier", cashier.lblUsername.Text);
+                cm.Parameters.AddWithValue("@status", "Pending"); // Add status parameter
                 cm.ExecuteNonQuery();
                 cn.Close();
+
                 cashier.LoadCart();
                 this.Dispose();
             }
