@@ -57,7 +57,7 @@ namespace POSales
 
         private void btnAddDiscount_Click(object sender, EventArgs e)
         {
-            slide(btnAddDiscount);
+            //slide(btnAddDiscount);
         }
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace POSales
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            slide(btnChangePassword);
+            //slide(btnChangePassword);
             // Add change password functionality here
         }
 

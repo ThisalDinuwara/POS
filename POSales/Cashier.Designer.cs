@@ -37,10 +37,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnClearcart = new System.Windows.Forms.Button();
             this.btnSettlePayment = new System.Windows.Forms.Button();
-            this.btnAddDiscount = new System.Windows.Forms.Button();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -97,10 +95,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnChangePassword);
             this.panel1.Controls.Add(this.btnClearcart);
             this.panel1.Controls.Add(this.btnSettlePayment);
-            this.panel1.Controls.Add(this.btnAddDiscount);
             this.panel1.Controls.Add(this.btnSearchProduct);
             this.panel1.Controls.Add(this.btnTransaction);
             this.panel1.Controls.Add(this.panel2);
@@ -130,26 +126,6 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.btnChangePassword.FlatAppearance.BorderSize = 0;
-            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
-            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChangePassword.Location = new System.Drawing.Point(0, 523);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(200, 50);
-            this.btnChangePassword.TabIndex = 8;
-            this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChangePassword.UseCompatibleTextRendering = true;
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
             // btnClearcart
             // 
             this.btnClearcart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -159,7 +135,7 @@
             this.btnClearcart.ForeColor = System.Drawing.Color.White;
             this.btnClearcart.Image = ((System.Drawing.Image)(resources.GetObject("btnClearcart.Image")));
             this.btnClearcart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearcart.Location = new System.Drawing.Point(5, 453);
+            this.btnClearcart.Location = new System.Drawing.Point(5, 401);
             this.btnClearcart.Name = "btnClearcart";
             this.btnClearcart.Size = new System.Drawing.Size(200, 50);
             this.btnClearcart.TabIndex = 6;
@@ -178,7 +154,7 @@
             this.btnSettlePayment.ForeColor = System.Drawing.Color.White;
             this.btnSettlePayment.Image = ((System.Drawing.Image)(resources.GetObject("btnSettlePayment.Image")));
             this.btnSettlePayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettlePayment.Location = new System.Drawing.Point(0, 386);
+            this.btnSettlePayment.Location = new System.Drawing.Point(3, 327);
             this.btnSettlePayment.Name = "btnSettlePayment";
             this.btnSettlePayment.Size = new System.Drawing.Size(200, 50);
             this.btnSettlePayment.TabIndex = 5;
@@ -187,25 +163,6 @@
             this.btnSettlePayment.UseCompatibleTextRendering = true;
             this.btnSettlePayment.UseVisualStyleBackColor = true;
             this.btnSettlePayment.Click += new System.EventHandler(this.btnSettlePayment_Click);
-            // 
-            // btnAddDiscount
-            // 
-            this.btnAddDiscount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddDiscount.FlatAppearance.BorderSize = 0;
-            this.btnAddDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDiscount.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDiscount.ForeColor = System.Drawing.Color.White;
-            this.btnAddDiscount.Image = ((System.Drawing.Image)(resources.GetObject("btnAddDiscount.Image")));
-            this.btnAddDiscount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddDiscount.Location = new System.Drawing.Point(3, 250);
-            this.btnAddDiscount.Name = "btnAddDiscount";
-            this.btnAddDiscount.Size = new System.Drawing.Size(200, 50);
-            this.btnAddDiscount.TabIndex = 4;
-            this.btnAddDiscount.Text = "Add Discount";
-            this.btnAddDiscount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddDiscount.UseCompatibleTextRendering = true;
-            this.btnAddDiscount.UseVisualStyleBackColor = true;
-            this.btnAddDiscount.Click += new System.EventHandler(this.btnAddDiscount_Click);
             // 
             // btnSearchProduct
             // 
@@ -216,7 +173,7 @@
             this.btnSearchProduct.ForeColor = System.Drawing.Color.White;
             this.btnSearchProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchProduct.Image")));
             this.btnSearchProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchProduct.Location = new System.Drawing.Point(0, 316);
+            this.btnSearchProduct.Location = new System.Drawing.Point(5, 262);
             this.btnSearchProduct.Name = "btnSearchProduct";
             this.btnSearchProduct.Size = new System.Drawing.Size(200, 50);
             this.btnSearchProduct.TabIndex = 3;
@@ -707,11 +664,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnAddDiscount;
         private System.Windows.Forms.Button btnSearchProduct;
         private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnClearcart;
         private System.Windows.Forms.Button btnSettlePayment;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -128,6 +128,12 @@
     <Compile Include="ProductModule.Designer.cs">
       <DependentUpon>ProductModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductStock.Designer.cs">
+      <DependentUpon>ProductStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Qty.cs">
@@ -135,6 +141,18 @@
     </Compile>
     <Compile Include="Qty.Designer.cs">
       <DependentUpon>Qty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selling.Designer.cs">
+      <DependentUpon>Selling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stockin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stockin.Designer.cs">
+      <DependentUpon>Stockin.cs</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
@@ -193,6 +211,9 @@
     <EmbeddedResource Include="ProductModule.resx">
       <DependentUpon>ProductModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductStock.resx">
+      <DependentUpon>ProductStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -204,6 +225,12 @@
     </Compile>
     <EmbeddedResource Include="Qty.resx">
       <DependentUpon>Qty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selling.resx">
+      <DependentUpon>Selling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stockin.resx">
+      <DependentUpon>Stockin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
