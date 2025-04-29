@@ -42,8 +42,8 @@ namespace POSales
         private void customizeDesign()
         {
             panelSubProduct.Visible = false;
-            panelSubRecord.Visible = false;
-            panelSubStock.Visible = false;
+            //panelSubRecord.Visible = false;
+            //panelSubStock.Visible = false;
             panelSubSetting.Visible = false;
         }
 
@@ -51,10 +51,10 @@ namespace POSales
         {
             if (panelSubProduct.Visible == true)
                 panelSubProduct.Visible = false;
-            if (panelSubRecord.Visible == true)
-                panelSubRecord.Visible = false;
-            if (panelSubStock.Visible == true)
-                panelSubStock.Visible = false;
+           // if (panelSubRecord.Visible == true)
+                //panelSubRecord.Visible = false;
+            //if (panelSubStock.Visible == true)
+                //panelSubStock.Visible = false;
             if (panelSubSetting.Visible == true)
                 panelSubSetting.Visible = false;
         }
@@ -113,7 +113,7 @@ namespace POSales
 
         private void btnInStock_Click(object sender, EventArgs e)
         {
-            showSubmenu(panelSubStock);
+            //showSubmenu(panelSubStock);
         }
 
         private void btnStockEntry_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace POSales
 
         private void btnRecord_Click(object sender, EventArgs e)
         {
-            showSubmenu(panelSubRecord);
+            //showSubmenu(panelSubRecord);
         }
 
         private void btnSaleHistory_Click(object sender, EventArgs e)

@@ -98,6 +98,7 @@
       <DependentUpon>DashboardTest.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

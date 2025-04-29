@@ -25,10 +25,10 @@ namespace POSales
             cn = new SqlConnection(dbcon.myConnection());
             GetTransaction();
             // Initialize labels with zero values to prevent parsing errors
-            lblTotalSales.Text = "0.00";
-            lblDiscount.Text = "0.00";
-            lblVat.Text = "0.00";
-            lblVatable.Text = "0.00";
+            //lblTotalSales.Text = "0.00";
+            //lblDiscount.Text = "0.00";
+            //lblVat.Text = "0.00";
+            //lblVatable.Text = "0.00";
             lblDisplayTotal.Text = "0.00";
         }
 
@@ -51,7 +51,7 @@ namespace POSales
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
-            slide(btnTransaction);
+            //slide(btnTransaction);
             GetTransaction();
         }
 
@@ -62,20 +62,24 @@ namespace POSales
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
-            slide(btnSearchProduct);
+           // slide(btnStock);
             LookUpProduct lookUp = new LookUpProduct(this);
             lookUp.LoadProduct();
             lookUp.ShowDialog();
+
         }
 
         private void btnSettlePayment_Click(object sender, EventArgs e)
         {
             slide(btnSettlePayment);
+            Selling obj = new Selling();
+            obj.Show();
+            this.Hide();
         }
 
         private void btnClearcart_Click(object sender, EventArgs e)
         {
-            slide(btnClearcart);
+            //slide(btnClearcart);
 
             try
             {
@@ -117,7 +121,7 @@ namespace POSales
         #endregion button
 
         public void LoadCart()
-        {
+        {/*
             try
             {
                 int i = 0;
@@ -162,15 +166,15 @@ namespace POSales
                 cn.Close();
 
                 // Update summary labels
-                lblTotalSales.Text = total.ToString("#,##0.00");
-                lblDiscount.Text = discount.ToString("#,##0.00");
+                //lblTotalSales.Text = total.ToString("#,##0.00");
+                //lblDiscount.Text = discount.ToString("#,##0.00");
                 GetCartTotal();
             }
             catch (Exception ex)
             {
                 cn.Close();
                 MessageBox.Show("Error loading cart: " + ex.Message, stitle);
-            }
+            }*/
         }
 
         public void GetCartTotal()
@@ -179,13 +183,13 @@ namespace POSales
             {
                 // Safe parsing with defaults
                 double discount = 0;
-                if (!double.TryParse(lblDiscount.Text, out discount))
+                //if (!double.TryParse(lblDiscount.Text, out discount))
                 {
                     discount = 0;
                 }
 
                 double sales = 0;
-                if (!double.TryParse(lblTotalSales.Text, out sales))
+                //if (!double.TryParse(lblTotalSales.Text, out sales))
                 {
                     sales = 0;
                 }
@@ -194,8 +198,8 @@ namespace POSales
                 double vat = finalSales * 0.12; // 12% VAT
                 double vatable = finalSales - vat;
 
-                lblVat.Text = vat.ToString("#,##0.00");
-                lblVatable.Text = vatable.ToString("#,##0.00");
+                //lblVat.Text = vat.ToString("#,##0.00");
+                //lblVatable.Text = vatable.ToString("#,##0.00");
                 lblDisplayTotal.Text = finalSales.ToString("#,##0.00");
             }
             catch (Exception ex)
@@ -353,7 +357,7 @@ namespace POSales
         // Method to update product quantity
         public void UpdateInventory()
         {
-            try
+           /* try
             {
                 cn.Open();
                 for (int i = 0; i < dgvCash.Rows.Count; i++)
@@ -381,12 +385,12 @@ namespace POSales
                 if (cn.State == ConnectionState.Open)
                     cn.Close();
                 MessageBox.Show("Error updating inventory: " + ex.Message, stitle);
-            }
+            }*/
         }
 
         private void dgvCash_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+           /* try
             {
                 if (e.RowIndex < 0 || e.ColumnIndex < 0)
                     return;
@@ -404,7 +408,36 @@ namespace POSales
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, stitle);
-            }
+            }*/
+        }
+
+        private void lblTimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Cashier_Load(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(dbcon.myConnection());
+            String getProduct = "SELECT pcode, pdesc ,price ,barcode AS quantity FROM tblProduct ;";
+            SqlCommand cmd = new SqlCommand(getProduct, cn);
+
+            cn.Open();
+            SqlDataAdapter dt = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            DataGridViewStock.DataSource = table;
+            cn.Close();
         }
     }
 }

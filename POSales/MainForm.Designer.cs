@@ -32,18 +32,9 @@
             this.panelSlide = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelSubSetting = new System.Windows.Forms.Panel();
-            this.btnStore = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
-            this.panelSubRecord = new System.Windows.Forms.Panel();
-            this.btnPOSRecord = new System.Windows.Forms.Button();
-            this.btnSaleHistory = new System.Windows.Forms.Button();
-            this.btnRecord = new System.Windows.Forms.Button();
             this.btnSupplier = new System.Windows.Forms.Button();
-            this.panelSubStock = new System.Windows.Forms.Panel();
-            this.btnStock = new System.Windows.Forms.Button();
-            this.btnStockEntry = new System.Windows.Forms.Button();
-            this.btnInStock = new System.Windows.Forms.Button();
             this.panelSubProduct = new System.Windows.Forms.Panel();
             this.btnBrand = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
@@ -60,8 +51,6 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelSlide.SuspendLayout();
             this.panelSubSetting.SuspendLayout();
-            this.panelSubRecord.SuspendLayout();
-            this.panelSubStock.SuspendLayout();
             this.panelSubProduct.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,11 +63,7 @@
             this.panelSlide.Controls.Add(this.btnLogout);
             this.panelSlide.Controls.Add(this.panelSubSetting);
             this.panelSlide.Controls.Add(this.btnSetting);
-            this.panelSlide.Controls.Add(this.panelSubRecord);
-            this.panelSlide.Controls.Add(this.btnRecord);
             this.panelSlide.Controls.Add(this.btnSupplier);
-            this.panelSlide.Controls.Add(this.panelSubStock);
-            this.panelSlide.Controls.Add(this.btnInStock);
             this.panelSlide.Controls.Add(this.panelSubProduct);
             this.panelSlide.Controls.Add(this.btnProduct);
             this.panelSlide.Controls.Add(this.btnDashboard);
@@ -97,10 +82,10 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 851);
+            this.btnLogout.Location = new System.Drawing.Point(0, 608);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(197, 45);
+            this.btnLogout.Size = new System.Drawing.Size(218, 45);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -109,29 +94,12 @@
             // panelSubSetting
             // 
             this.panelSubSetting.BackColor = System.Drawing.Color.MediumBlue;
-            this.panelSubSetting.Controls.Add(this.btnStore);
             this.panelSubSetting.Controls.Add(this.btnUser);
             this.panelSubSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubSetting.Location = new System.Drawing.Point(0, 755);
+            this.panelSubSetting.Location = new System.Drawing.Point(0, 473);
             this.panelSubSetting.Name = "panelSubSetting";
-            this.panelSubSetting.Size = new System.Drawing.Size(197, 96);
+            this.panelSubSetting.Size = new System.Drawing.Size(218, 44);
             this.panelSubSetting.TabIndex = 11;
-            // 
-            // btnStore
-            // 
-            this.btnStore.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStore.FlatAppearance.BorderSize = 0;
-            this.btnStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStore.ForeColor = System.Drawing.Color.White;
-            this.btnStore.Location = new System.Drawing.Point(0, 45);
-            this.btnStore.Name = "btnStore";
-            this.btnStore.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStore.Size = new System.Drawing.Size(197, 45);
-            this.btnStore.TabIndex = 7;
-            this.btnStore.Text = "Store";
-            this.btnStore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStore.UseVisualStyleBackColor = true;
-            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
             // 
             // btnUser
             // 
@@ -142,7 +110,7 @@
             this.btnUser.Location = new System.Drawing.Point(0, 0);
             this.btnUser.Name = "btnUser";
             this.btnUser.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUser.Size = new System.Drawing.Size(197, 45);
+            this.btnUser.Size = new System.Drawing.Size(218, 48);
             this.btnUser.TabIndex = 6;
             this.btnUser.Text = "User";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,74 +123,15 @@
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(0, 710);
+            this.btnSetting.Location = new System.Drawing.Point(0, 428);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(197, 45);
+            this.btnSetting.Size = new System.Drawing.Size(218, 45);
             this.btnSetting.TabIndex = 10;
             this.btnSetting.Text = "Setting";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.UseVisualStyleBackColor = true;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            // 
-            // panelSubRecord
-            // 
-            this.panelSubRecord.BackColor = System.Drawing.Color.MediumBlue;
-            this.panelSubRecord.Controls.Add(this.btnPOSRecord);
-            this.panelSubRecord.Controls.Add(this.btnSaleHistory);
-            this.panelSubRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubRecord.Location = new System.Drawing.Point(0, 614);
-            this.panelSubRecord.Name = "panelSubRecord";
-            this.panelSubRecord.Size = new System.Drawing.Size(197, 96);
-            this.panelSubRecord.TabIndex = 9;
-            // 
-            // btnPOSRecord
-            // 
-            this.btnPOSRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPOSRecord.FlatAppearance.BorderSize = 0;
-            this.btnPOSRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPOSRecord.ForeColor = System.Drawing.Color.White;
-            this.btnPOSRecord.Location = new System.Drawing.Point(0, 45);
-            this.btnPOSRecord.Name = "btnPOSRecord";
-            this.btnPOSRecord.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPOSRecord.Size = new System.Drawing.Size(197, 45);
-            this.btnPOSRecord.TabIndex = 7;
-            this.btnPOSRecord.Text = "POS Record";
-            this.btnPOSRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPOSRecord.UseVisualStyleBackColor = true;
-            this.btnPOSRecord.Click += new System.EventHandler(this.btnPOSRecord_Click);
-            // 
-            // btnSaleHistory
-            // 
-            this.btnSaleHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSaleHistory.FlatAppearance.BorderSize = 0;
-            this.btnSaleHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaleHistory.ForeColor = System.Drawing.Color.White;
-            this.btnSaleHistory.Location = new System.Drawing.Point(0, 0);
-            this.btnSaleHistory.Name = "btnSaleHistory";
-            this.btnSaleHistory.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSaleHistory.Size = new System.Drawing.Size(197, 45);
-            this.btnSaleHistory.TabIndex = 6;
-            this.btnSaleHistory.Text = "Sale History";
-            this.btnSaleHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaleHistory.UseVisualStyleBackColor = true;
-            this.btnSaleHistory.Click += new System.EventHandler(this.btnSaleHistory_Click);
-            // 
-            // btnRecord
-            // 
-            this.btnRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecord.FlatAppearance.BorderSize = 0;
-            this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecord.ForeColor = System.Drawing.Color.White;
-            this.btnRecord.Location = new System.Drawing.Point(0, 569);
-            this.btnRecord.Name = "btnRecord";
-            this.btnRecord.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRecord.Size = new System.Drawing.Size(197, 45);
-            this.btnRecord.TabIndex = 8;
-            this.btnRecord.Text = "Record";
-            this.btnRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecord.UseVisualStyleBackColor = true;
-            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
             // 
             // btnSupplier
             // 
@@ -230,74 +139,15 @@
             this.btnSupplier.FlatAppearance.BorderSize = 0;
             this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplier.ForeColor = System.Drawing.Color.White;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 524);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 383);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSupplier.Size = new System.Drawing.Size(197, 45);
+            this.btnSupplier.Size = new System.Drawing.Size(218, 45);
             this.btnSupplier.TabIndex = 7;
             this.btnSupplier.Text = "Supplier";
             this.btnSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupplier.UseVisualStyleBackColor = true;
             this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
-            // 
-            // panelSubStock
-            // 
-            this.panelSubStock.BackColor = System.Drawing.Color.MediumBlue;
-            this.panelSubStock.Controls.Add(this.btnStock);
-            this.panelSubStock.Controls.Add(this.btnStockEntry);
-            this.panelSubStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubStock.Location = new System.Drawing.Point(0, 428);
-            this.panelSubStock.Name = "panelSubStock";
-            this.panelSubStock.Size = new System.Drawing.Size(197, 96);
-            this.panelSubStock.TabIndex = 0;
-            // 
-            // btnStock
-            // 
-            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.Location = new System.Drawing.Point(0, 45);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStock.Size = new System.Drawing.Size(197, 45);
-            this.btnStock.TabIndex = 7;
-            this.btnStock.Text = "Stock Adjustment";
-            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStock.UseVisualStyleBackColor = true;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
-            // 
-            // btnStockEntry
-            // 
-            this.btnStockEntry.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStockEntry.FlatAppearance.BorderSize = 0;
-            this.btnStockEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStockEntry.ForeColor = System.Drawing.Color.White;
-            this.btnStockEntry.Location = new System.Drawing.Point(0, 0);
-            this.btnStockEntry.Name = "btnStockEntry";
-            this.btnStockEntry.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStockEntry.Size = new System.Drawing.Size(197, 45);
-            this.btnStockEntry.TabIndex = 6;
-            this.btnStockEntry.Text = "Stock Entry";
-            this.btnStockEntry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStockEntry.UseVisualStyleBackColor = true;
-            this.btnStockEntry.Click += new System.EventHandler(this.btnStockEntry_Click);
-            // 
-            // btnInStock
-            // 
-            this.btnInStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInStock.FlatAppearance.BorderSize = 0;
-            this.btnInStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInStock.ForeColor = System.Drawing.Color.White;
-            this.btnInStock.Location = new System.Drawing.Point(0, 383);
-            this.btnInStock.Name = "btnInStock";
-            this.btnInStock.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnInStock.Size = new System.Drawing.Size(197, 45);
-            this.btnInStock.TabIndex = 5;
-            this.btnInStock.Text = "In Stock";
-            this.btnInStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInStock.UseVisualStyleBackColor = true;
-            this.btnInStock.Click += new System.EventHandler(this.btnInStock_Click);
             // 
             // panelSubProduct
             // 
@@ -308,7 +158,7 @@
             this.panelSubProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubProduct.Location = new System.Drawing.Point(0, 240);
             this.panelSubProduct.Name = "panelSubProduct";
-            this.panelSubProduct.Size = new System.Drawing.Size(197, 143);
+            this.panelSubProduct.Size = new System.Drawing.Size(218, 143);
             this.panelSubProduct.TabIndex = 4;
             // 
             // btnBrand
@@ -320,7 +170,7 @@
             this.btnBrand.Location = new System.Drawing.Point(0, 90);
             this.btnBrand.Name = "btnBrand";
             this.btnBrand.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBrand.Size = new System.Drawing.Size(197, 45);
+            this.btnBrand.Size = new System.Drawing.Size(218, 45);
             this.btnBrand.TabIndex = 6;
             this.btnBrand.Text = "Brand";
             this.btnBrand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,7 +186,7 @@
             this.btnCategory.Location = new System.Drawing.Point(0, 45);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCategory.Size = new System.Drawing.Size(197, 45);
+            this.btnCategory.Size = new System.Drawing.Size(218, 45);
             this.btnCategory.TabIndex = 5;
             this.btnCategory.Text = "Category";
             this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,7 +202,7 @@
             this.btnProductList.Location = new System.Drawing.Point(0, 0);
             this.btnProductList.Name = "btnProductList";
             this.btnProductList.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnProductList.Size = new System.Drawing.Size(197, 45);
+            this.btnProductList.Size = new System.Drawing.Size(218, 45);
             this.btnProductList.TabIndex = 4;
             this.btnProductList.Text = "Product List";
             this.btnProductList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,7 +218,7 @@
             this.btnProduct.Location = new System.Drawing.Point(0, 195);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(197, 45);
+            this.btnProduct.Size = new System.Drawing.Size(218, 45);
             this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +234,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(0, 150);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(197, 45);
+            this.btnDashboard.Size = new System.Drawing.Size(218, 45);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,7 +250,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(197, 150);
+            this.panelLogo.Size = new System.Drawing.Size(218, 150);
             this.panelLogo.TabIndex = 1;
             // 
             // lblName
@@ -495,8 +345,6 @@
             this.Text = "Point of Sales";
             this.panelSlide.ResumeLayout(false);
             this.panelSubSetting.ResumeLayout(false);
-            this.panelSubRecord.ResumeLayout(false);
-            this.panelSubStock.ResumeLayout(false);
             this.panelSubProduct.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
@@ -518,17 +366,8 @@
         private System.Windows.Forms.Button btnBrand;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnProductList;
-        private System.Windows.Forms.Button btnInStock;
-        private System.Windows.Forms.Button btnRecord;
         private System.Windows.Forms.Button btnSupplier;
-        private System.Windows.Forms.Panel panelSubStock;
-        private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Button btnStockEntry;
-        private System.Windows.Forms.Panel panelSubRecord;
-        private System.Windows.Forms.Button btnPOSRecord;
-        private System.Windows.Forms.Button btnSaleHistory;
         private System.Windows.Forms.Panel panelSubSetting;
-        private System.Windows.Forms.Button btnStore;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnLogout;

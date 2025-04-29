@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardTest));
             this.panelSlide = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelSubSetting = new System.Windows.Forms.Panel();
             this.btnStore = new System.Windows.Forms.Button();
@@ -41,7 +44,6 @@
             this.btnRecord = new System.Windows.Forms.Button();
             this.btnSupplier = new System.Windows.Forms.Button();
             this.panelSubStock = new System.Windows.Forms.Panel();
-            this.btnStock = new System.Windows.Forms.Button();
             this.btnStockEntry = new System.Windows.Forms.Button();
             this.btnInStock = new System.Windows.Forms.Button();
             this.panelSubProduct = new System.Windows.Forms.Panel();
@@ -55,21 +57,18 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelSlide.SuspendLayout();
+            this.panelTitle.SuspendLayout();
             this.panelSubSetting.SuspendLayout();
             this.panelSubRecord.SuspendLayout();
             this.panelSubStock.SuspendLayout();
             this.panelSubProduct.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,13 +95,45 @@
             this.panelSlide.Size = new System.Drawing.Size(218, 653);
             this.panelSlide.TabIndex = 1;
             // 
+            // panelTitle
+            // 
+            this.panelTitle.Controls.Add(this.panelMain);
+            this.panelTitle.Controls.Add(this.lblTitle);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 806);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(197, 40);
+            this.panelTitle.TabIndex = 13;
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMain.BackgroundImage")));
+            this.panelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(197, 40);
+            this.panelMain.TabIndex = 3;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(277, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(390, 21);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "TitleName";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnLogout
             // 
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 891);
+            this.btnLogout.Location = new System.Drawing.Point(0, 846);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLogout.Size = new System.Drawing.Size(197, 45);
@@ -117,7 +148,7 @@
             this.panelSubSetting.Controls.Add(this.btnStore);
             this.panelSubSetting.Controls.Add(this.btnUser);
             this.panelSubSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubSetting.Location = new System.Drawing.Point(0, 755);
+            this.panelSubSetting.Location = new System.Drawing.Point(0, 710);
             this.panelSubSetting.Name = "panelSubSetting";
             this.panelSubSetting.Size = new System.Drawing.Size(197, 96);
             this.panelSubSetting.TabIndex = 11;
@@ -158,7 +189,7 @@
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(0, 710);
+            this.btnSetting.Location = new System.Drawing.Point(0, 665);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnSetting.Size = new System.Drawing.Size(197, 45);
@@ -173,7 +204,7 @@
             this.panelSubRecord.Controls.Add(this.btnPOSRecord);
             this.panelSubRecord.Controls.Add(this.btnSaleHistory);
             this.panelSubRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubRecord.Location = new System.Drawing.Point(0, 614);
+            this.panelSubRecord.Location = new System.Drawing.Point(0, 569);
             this.panelSubRecord.Name = "panelSubRecord";
             this.panelSubRecord.Size = new System.Drawing.Size(197, 96);
             this.panelSubRecord.TabIndex = 9;
@@ -214,7 +245,7 @@
             this.btnRecord.FlatAppearance.BorderSize = 0;
             this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecord.ForeColor = System.Drawing.Color.White;
-            this.btnRecord.Location = new System.Drawing.Point(0, 569);
+            this.btnRecord.Location = new System.Drawing.Point(0, 524);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnRecord.Size = new System.Drawing.Size(197, 45);
@@ -229,7 +260,7 @@
             this.btnSupplier.FlatAppearance.BorderSize = 0;
             this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplier.ForeColor = System.Drawing.Color.White;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 524);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 479);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnSupplier.Size = new System.Drawing.Size(197, 45);
@@ -241,28 +272,12 @@
             // panelSubStock
             // 
             this.panelSubStock.BackColor = System.Drawing.Color.MediumBlue;
-            this.panelSubStock.Controls.Add(this.btnStock);
             this.panelSubStock.Controls.Add(this.btnStockEntry);
             this.panelSubStock.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubStock.Location = new System.Drawing.Point(0, 428);
             this.panelSubStock.Name = "panelSubStock";
-            this.panelSubStock.Size = new System.Drawing.Size(197, 96);
+            this.panelSubStock.Size = new System.Drawing.Size(197, 51);
             this.panelSubStock.TabIndex = 0;
-            // 
-            // btnStock
-            // 
-            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.Location = new System.Drawing.Point(0, 45);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStock.Size = new System.Drawing.Size(197, 45);
-            this.btnStock.TabIndex = 7;
-            this.btnStock.Text = "Stock Adjustment";
-            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStock.UseVisualStyleBackColor = true;
             // 
             // btnStockEntry
             // 
@@ -433,38 +448,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panelTitle
-            // 
-            this.panelTitle.Controls.Add(this.panelMain);
-            this.panelTitle.Controls.Add(this.lblTitle);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 851);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(197, 40);
-            this.panelTitle.TabIndex = 13;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(277, 8);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(390, 21);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "TitleName";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelMain
-            // 
-            this.panelMain.BackColor = System.Drawing.Color.White;
-            this.panelMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMain.BackgroundImage")));
-            this.panelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(197, 40);
-            this.panelMain.TabIndex = 3;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
@@ -475,6 +458,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(964, 40);
             this.panel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(6, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 37);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "HOME";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -498,19 +494,6 @@
             this.panel2.Size = new System.Drawing.Size(964, 613);
             this.panel2.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(6, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "HOME";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // DashboardTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -523,6 +506,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardTest";
             this.panelSlide.ResumeLayout(false);
+            this.panelTitle.ResumeLayout(false);
             this.panelSubSetting.ResumeLayout(false);
             this.panelSubRecord.ResumeLayout(false);
             this.panelSubStock.ResumeLayout(false);
@@ -530,7 +514,6 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelTitle.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -550,7 +533,6 @@
         private System.Windows.Forms.Button btnRecord;
         private System.Windows.Forms.Button btnSupplier;
         private System.Windows.Forms.Panel panelSubStock;
-        private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnStockEntry;
         private System.Windows.Forms.Button btnInStock;
         private System.Windows.Forms.Panel panelSubProduct;
