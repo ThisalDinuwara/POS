@@ -72,6 +72,7 @@ namespace POSales
                 MessageBox.Show("Category has been successfully Updated.", "Point Of Sales");
                 Clear();
                 this.Dispose();
+
             }
         }
 

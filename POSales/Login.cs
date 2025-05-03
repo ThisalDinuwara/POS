@@ -76,14 +76,12 @@ namespace POSales
                     _role = dr["role"].ToString();
                     _pass = dr["password"].ToString();
 
-                    // Handle NULL values in isactive field as active by default
                     if (dr["isactive"] == DBNull.Value)
                     {
-                        _isactive = true; // Treat NULL as active
+                        _isactive = true; 
                     }
                     else
                     {
-                        // Try to convert to boolean safely
                         bool result;
                         string isActiveStr = dr["isactive"].ToString();
                         if (Boolean.TryParse(isActiveStr, out result))
@@ -92,8 +90,6 @@ namespace POSales
                         }
                         else
                         {
-                            // Handle case when string can't be parsed to boolean directly
-                            // This handles common representations like "0"/"1", "Y"/"N", etc.
                             _isactive = isActiveStr == "1" ||
                                       isActiveStr.ToLower() == "y" ||
                                       isActiveStr.ToLower() == "yes" ||
@@ -147,7 +143,7 @@ namespace POSales
             {
                 MessageBox.Show("Login error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (cn.State == ConnectionState.Open)
-                    cn.Close(); // Make sure to close the connection in case of an error
+                    cn.Close();
             }
         }
 
@@ -162,6 +158,17 @@ namespace POSales
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void chkpShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkpShow.Checked == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            } else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }

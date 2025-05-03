@@ -49,7 +49,7 @@ namespace POSales
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //for update and delete category by cell click from tblCategory
+          
             string colName = dgvCategory.Columns[e.ColumnIndex].Name;
             if (colName == "Delete")
             {

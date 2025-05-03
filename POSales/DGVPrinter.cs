@@ -18,14 +18,10 @@ namespace DGVPrinterHelper //AllocationRequest
 {
     #region Supporting Classes
 
-    /// <summary>
-    /// Setup and implements logs for internal logging
-    /// </summary>
+    
     class LogManager
     {
-        /// <summary>
-        /// Path to log file
-        /// </summary>
+        
         private String basepath;
         public String BasePath
         {
@@ -33,9 +29,7 @@ namespace DGVPrinterHelper //AllocationRequest
             set { basepath = value; }
         }
 
-        /// <summary>
-        /// Header for log file name
-        /// </summary>
+        
         private String logheader;
         public String LogNameHeader
         {
@@ -45,9 +39,7 @@ namespace DGVPrinterHelper //AllocationRequest
 
         private int useFrame = 1;
 
-        /// <summary>
-        /// Define logging message categories
-        /// </summary>
+        
         public enum Categories
         {
             Info = 1,
@@ -56,11 +48,6 @@ namespace DGVPrinterHelper //AllocationRequest
             Exception
         }
 
-        /// <summary>
-        /// Constructor, allow user to override path and name of logging file
-        /// </summary>
-        /// <param name="userbasepath"></param>
-        /// <param name="userlogname"></param>
         public LogManager(String userbasepath, String userlogname)
         {
             BasePath = String.IsNullOrEmpty(userbasepath) ? "." : userbasepath;
@@ -69,11 +56,7 @@ namespace DGVPrinterHelper //AllocationRequest
             Log(Categories.Info, "********************* New Trace *********************");
         }
 
-        /// <summary>
-        /// Log a message, using the provided category
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="msg"></param>
+        
         public void Log(Categories category, String msg)
         {
             // get call stack

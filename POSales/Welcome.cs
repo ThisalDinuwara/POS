@@ -29,7 +29,7 @@ namespace POSales
         int startPoint = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startPoint += 2;
+            startPoint += 10;
             ProgressBar1.Value = startPoint;
             if (ProgressBar1.Value == 100)
             {

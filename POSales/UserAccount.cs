@@ -21,6 +21,7 @@ namespace POSales
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.myConnection());
+            LoadGrideView();
         }
 
         public void Clear()
@@ -83,11 +84,45 @@ namespace POSales
             {
                 MessageBox.Show(ex.Message, "Warning");
             }
+            LoadGrideView();
         }
 
         private void btnAccCancel_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        public void LoadGrideView()
+        {
+            string connectionString = "Data Source=MSIGRATDRAGON;Initial Catalog=DBPOSale;Integrated Security=True;Encrypt=False";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+
+            {
+
+                string query = "SELECT * FROM tblUser";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dgvUser.DataSource = dt;
+
+            }
+
+        }
+
+        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnPassCancel_Click(object sender, EventArgs e)
+        {
+            Clear();
+
         }
     }
 }

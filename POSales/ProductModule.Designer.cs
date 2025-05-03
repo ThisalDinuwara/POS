@@ -46,13 +46,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.UDReOrder = new System.Windows.Forms.NumericUpDown();
             this.cmbBrand = new System.Windows.Forms.ComboBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.UDReOrder = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -245,15 +245,6 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Price :";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(411, 302);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 21);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Re-Order Level :";
-            // 
             // txtBarcode
             // 
             this.txtBarcode.Location = new System.Drawing.Point(545, 67);
@@ -275,6 +266,22 @@
             this.txtPrice.Size = new System.Drawing.Size(207, 30);
             this.txtPrice.TabIndex = 23;
             // 
+            // cmbBrand
+            // 
+            this.cmbBrand.FormattingEnabled = true;
+            this.cmbBrand.Location = new System.Drawing.Point(184, 181);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(555, 29);
+            this.cmbBrand.TabIndex = 26;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(184, 241);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(555, 29);
+            this.cmbCategory.TabIndex = 27;
+            // 
             // UDReOrder
             // 
             this.UDReOrder.Location = new System.Drawing.Point(567, 300);
@@ -293,21 +300,14 @@
             0,
             0});
             // 
-            // cmbBrand
+            // label9
             // 
-            this.cmbBrand.FormattingEnabled = true;
-            this.cmbBrand.Location = new System.Drawing.Point(184, 181);
-            this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(555, 29);
-            this.cmbBrand.TabIndex = 26;
-            // 
-            // cmbCategory
-            // 
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(184, 241);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(555, 29);
-            this.cmbCategory.TabIndex = 27;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(411, 302);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 21);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Re-Order Level :";
             // 
             // ProductModule
             // 
@@ -336,6 +336,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -372,12 +373,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txtBarcode;
         public System.Windows.Forms.TextBox txtDescription;
         public System.Windows.Forms.TextBox txtPrice;
-        public System.Windows.Forms.NumericUpDown UDReOrder;
         public System.Windows.Forms.ComboBox cmbBrand;
         public System.Windows.Forms.ComboBox cmbCategory;
+        public System.Windows.Forms.NumericUpDown UDReOrder;
+        private System.Windows.Forms.Label label9;
     }
 }

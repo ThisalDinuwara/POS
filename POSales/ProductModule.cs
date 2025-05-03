@@ -56,7 +56,7 @@ namespace POSales
             txtPrice.Clear();
             cmbBrand.SelectedIndex = 0;
             cmbCategory.SelectedIndex = 0;
-            UDReOrder.Value = 1;
+            
 
             txtProductCode.Enabled = true;
             txtProductCode.Focus();
@@ -76,7 +76,7 @@ namespace POSales
                     cm.Parameters.AddWithValue("@bid", cmbBrand.SelectedValue);
                     cm.Parameters.AddWithValue("@cid", cmbCategory.SelectedValue);
                     cm.Parameters.AddWithValue("@price", double.Parse(txtPrice.Text));
-                    cm.Parameters.AddWithValue("@reorder", UDReOrder.Value);
+                    
                     cn.Open();
                     cm.ExecuteNonQuery();
                     cn.Close();
@@ -109,7 +109,7 @@ namespace POSales
                     cm.Parameters.AddWithValue("@bid", cmbBrand.SelectedValue);
                     cm.Parameters.AddWithValue("@cid", cmbCategory.SelectedValue);
                     cm.Parameters.AddWithValue("@price", double.Parse(txtPrice.Text));
-                    cm.Parameters.AddWithValue("@reorder", UDReOrder.Value);
+              
                     cn.Open();
                     cm.ExecuteNonQuery();
                     cn.Close();

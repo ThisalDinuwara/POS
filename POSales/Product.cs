@@ -23,7 +23,7 @@ namespace POSales
             InitializeComponent();
             cn = new SqlConnection(dbcon.myConnection());
             LoadProduct();
-        } 
+        }
         public void LoadProduct()
         {
             int i = 0;

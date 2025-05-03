@@ -73,8 +73,8 @@ namespace POSales
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            DashboardTest dashboardTest = new DashboardTest();
-            dashboardTest.Show();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
             this.Hide();
         }
 
